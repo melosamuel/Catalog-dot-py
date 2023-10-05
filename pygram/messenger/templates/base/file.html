@@ -1,0 +1,19 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'output.css' %}" type="text/css">
+    <title>{% block title %}Pygram | Welcome{% endblock %}</title>
+</head>
+<body class="w-full h-full px-6 py-4 bg-[#d4d4d4] text-[#2b2b2b]">
+    <header class="flex justify-between w-full">
+        {% block header %} {% endblock %}
+    </header>
+    <main class="w-full min-h-full flex flex-col text-center p-16">
+        {% block main %} {% endblock %}
+    </main>
+</body>
+</html>
