@@ -18,4 +18,4 @@ def login(request):
         return redirect(reverse('login') + f'?err={err}')
 
     login_user(request, user)
-    return redirect("/pygram")
+    return redirect(reverse("messenger"))
