@@ -28,8 +28,18 @@ class TestModelUsers(TestCase):
 
         self.assertRedirects(response, reverse('messenger'))
 
-    def test_user_cannot_login_without_email(self):
-        ...
+    def test_user_cannot_login_without_username(self):
+        self.user.username = ''
+
+        form_data = {
+            'username': self.user.username,
+            'password': '1234'
+        }
+
+        response = self.client.post(reverse('login'), data=form_data)
+        self.assertRedirects(response, '/auth/login?err=True')
+        
+
     def test_user_cannot_login_without_password(self):
         ...
     def test_user_needs_to_login_before_acessing_the_messenger_page(self):
