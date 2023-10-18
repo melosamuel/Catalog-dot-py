@@ -49,4 +49,5 @@ class TestModelUsers(TestCase):
         self.assertRedirects(response, '/auth/login?err=True')
 
     def test_user_needs_to_login_before_acessing_the_messenger_page(self):
-        ...
+        response = self.client.get(reverse('messenger'))
+        self.assertNotEquals(response.status_code, 200)
