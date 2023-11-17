@@ -1,0 +1,35 @@
+{% extends 'base/base.html' %}
+
+{% block body %}
+    <header class="bg-blue-950 py-4 text-left grid grid-cols-6 gap-4">
+        <div class="col-span-1">
+            <h1 class="text-white font-bold text-4xl">C</h1>
+        </div>
+        <div class="col-span-5">
+            <input type="text" name="Search" id="search" class="col-span-4 w-full p-2 rounded-sm" placeholder="Search">
+            <ul class="flex flex-row flex-nowrap justify-between px-2 my-2 text-white">
+                <li><a href="#">home</a></li>
+                <li><a href="#">home</a></li>
+                <li><a href="#">home</a></li>
+                <li><a href="#">home</a></li>
+            </ul>
+        </div>
+    </header>
+    <div class="grid grid-cols-6 min-h-screen">
+        <aside class="col-span-1 bg-blue-950 p-4">
+            <ul class="text-left">
+                <li class="my-3 text-lg text-white underline cursor-pointer">Menu</li>
+                <li class="my-3 text-lg text-white underline cursor-pointer">Menu</li>
+                <li class="my-3 text-lg text-white underline cursor-pointer">Menu</li>
+                <li class="my-3 text-lg text-white underline cursor-pointer">Menu</li>
+                <li class="my-3 text-lg text-white underline cursor-pointer">Menu</li>
+            </ul>
+        </aside>
+        <main class="bg-yellow-500 py-4 pl-2 pr-4 flex flex-row flex-wrap col-span-5">
+            <div class="card">
+                <img src="{{ MEDIA_URL }}media/images/smartphone.jpg" id="smartphone" class="mb-2 w-52 rounded-md">
+                <label for="smartphone" class="mt-2 absolute bg-gray-400 p-1 rounded-r-md bg-opacity-50 pointer-events-none text-white">Smartphones</label>
+            </div>
+        </main>
+    </div>
+{% endblock %}
